@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+		<style type="text/css">
+			body {
+				margin:0px;
+				padding:10px;
+
+				background:#999999;
+			}
+
+			header, footer {
+				display:block;
+
+				min-height:100px;
+
+				margin:10px;
+				padding:10px;
+
+				background:#FFEEBB;
+			}
+
+			#main {
+				display:flex;
+				flex-flow:row;
+
+				min-height:800px;
+
+				margin:0;
+				padding:0;
+			}
+
+			#main > nav {
+				flex:1 6 100px;
+				order:1;
+
+				margin:10px;
+				padding:10px;
+
+				background: #CCCCFF;
+			}
+
+			#main > article {
+				flex:3 1 400px;
+				order:2;
+				
+				margin:10px;
+				padding:10px;
+
+				background: #DDDD88;
+			}
+		
+			#main > aside {
+				flex:1 6 100px;
+				order:3;
+
+				margin:10px;
+				padding:10px;
+
+				background:#CCCCFF;
+			}
+
+			@media (max-width:400px) {
+				#main {
+					flex-flow:column;
+				}
+
+				#main > nav, #main > article, #main > aside {
+					order:0;
+				}
+
+				header, footer, #main > nav, #main > aside {
+					min-height:50px;
+					max-height:50px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>header</header>
+		<div id="main">
+			<nav>nav</nav>
+			<article>article</article>
+			<aside>aside</aside>
+		</div>
+		<footer>footer</footer>
+	</body>
+</html>

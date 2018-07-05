@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+		<style type="text/css">
+			#outer {
+				width:300px;
+				height:150px;
+				
+				margin:50px;
+
+				background-color:#CCCCCC;
+			}
+
+			#first {
+                position:relative;
+                float: left;
+                margin: 10px ;
+                background-color:#FFFFFF;
+			}
+
+			#second {
+               position:relative;
+               float: right;
+               top : -118px;
+               margin: 82px;
+               right : -9.8px;
+               background-color:#FFFFFF;
+			}
+			
+			#fixed {
+                position:fixed;
+                bottom:0;
+                left:0;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="first">
+				left: 10 px
+				<br>
+				top: 10 px
+			</div>
+			<div id="second">
+				left: 150 px
+				<br>
+				top: 20 px
+			</div>
+		</div>
+
+		<div id="fixed">fixed on the bottom left</div>
+	</body>
+</html>
