@@ -17,26 +17,21 @@
 				// to do this, you will have create jquery elements that represent the tr / td elements and append them systematically to a jquery table element
 
 
-                        var table = $("<table></table>");
-                        table[0].border = "1";
-
-                        var rowCnt = intHeight;
-                        var colCnt = intWidth;
-
-                        for (var i = 0; i < rowCnt; i++) {
-                            row = $(table[0].insertRow(-1));
-                            var val1 = i+1;
-                            for (var j = 0; j < colCnt; j++) {
-                                var cell = $("<td />");
-                                var val2 = j+1;
-                                cell.html(val1+'.'+val2);
-                                row.append(cell);
-                            }
-                        }
-
-                        var output = $("#output");
-                        output.html("");
-                        output.append(table);
+                         var rowCnt = intHeight;
+                         var colCnt = intWidth;
+                         
+                         var output =jQuery('<table border = \"1\" ></table>')
+                         for(var i = 0 ; i< rowCnt; i++){
+                             var val1 = i+1;
+                             var row = jQuery('<tr></tr>').appendTo(output);
+                             for(var j = 0 ; j< colCnt;j++)
+                             {
+                                 var val2 = j+1;
+                                 jQuery('<td>'+val1+'.'+val2+'</td>').appendTo(row);
+                             }
+                         }
+                       
+                        return output;
 			};
 
 			jQuery('#output')

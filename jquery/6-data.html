@@ -16,12 +16,34 @@
 				// when a cell / td element is being clicked, its text should be changed to 'y.x' (see example below)
 				// you have to attach a click listener to each cell / td element and i recommend to make use of the jquery data function
 
-				return jQuery('<table></table>');
+                    var rowCnt = intHeight;
+                    var colCnt = intWidth;
+                    
+                    var output =jQuery('<table border = \"1\" ></table>')
+                    for(var i = 0 ; i< rowCnt; i++){
+                        val1 = i+1;
+                        var row = jQuery('<tr></tr>').appendTo(output);
+                        for(var j = 0 ; j< colCnt;j++)
+                        {
+                            val2 = j+1;
+                            jQuery('<td></td>').text('click me').appendTo(row);
+                        }
+                    }
+
+                    return output;
 			};
+        
+        
 
 			jQuery('#output')
 				.append(functionCreate(3, 2))
 			;
+            
+            jQuery('#output').on('click' ,'td', function(event) {
+                            var row_index = $(this).closest("tr").index();
+                            var col_index = $(this).index();
+                            jQuery(this).text((row_index+1) + "." + (col_index+1));
+                            });
 			
 			// expected table for functionCreate(2, 1):
 			//   <table border="1">

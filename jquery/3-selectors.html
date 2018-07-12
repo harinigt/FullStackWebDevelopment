@@ -56,6 +56,21 @@
 
 		<script type="text/javascript">
 			// place the javascript code that selects the cells and applies the appropriate colors here
+            $('tr#try_children').css({"color" :"#FF0000"});
+            $('td#try_siblings').siblings().css({"color" :"#00FF00"});
+            $('td#try_prev').prev().css({"color" :"#0000FF"});
+            
+            $('td:eq(0)').css({"color" : "#FF0000"});
+            $('td:eq(1)').css({"color" : "#00FF00"});
+            $('td:eq(2)').css({"color" : "#0000FF"});
+            $('td:eq(3)').css({"color" : "#FFFF00"});
+
+            
+            $('.try_last_child:last-child').css({"color" : "#FF00FF"});
+            $('.try_nth_child:nth-child(odd)').css({"color" : "#00FFFF"});
+            
+            
+            
 		</script>
 	</body>
 </html>
