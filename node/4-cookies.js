@@ -9,7 +9,7 @@ var server = http.createServer(function(req,res){
    if(cur_cookies===undefined){
    	res.writeHead(200, { 
     'Content-Type':'text/plain',
-	'Set-Cookie':'indent='+req.url
+	  'Set-Cookie':'indent='+req.url
 	});
 	res.write('you must be new');
 	res.end();
@@ -26,7 +26,6 @@ var server = http.createServer(function(req,res){
           var out = cur_cookies.split('=');
 
    	 }
-       
       console.log("nth_cookie :" + nth_cookie);
       console.log("out :" + out);
    	res.writeHead(200, { 
@@ -37,8 +36,6 @@ var server = http.createServer(function(req,res){
 	res.end();
      
    }
-
-
 });
 
 server.listen(process.env.PORT || 8080);

@@ -37,16 +37,16 @@
            
            var isDragged = false;
            
-           $('#draggable').mousedown(function(event){
+           $('.draggable').mousedown(function(event){
                                      isDragged = true;
                                      lleft = event.pageX;
                                      ttop = event.pageY;
                                      
                                      $(document).mousemove(function(event){
                                                            if(isDragged){
-                                                           $("#draggable").offset({
-                                                                          top : event.pageY - ttop+8,
-                                                                          left : event.pageX - lleft+8
+                                                           $(".draggable").offset({
+                                                                          top : event.pageY - ttop,
+                                                                          left : event.pageX - lleft
                                                                           });
                                                            }
                                                     

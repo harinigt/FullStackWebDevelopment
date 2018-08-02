@@ -17,15 +17,7 @@
 			var functionGet = function(strSelector) {
 				// determine whether the content of jQuery(strSelector) should be retrieved by using .val() or .text() and return this content
 
-                         var out = $(strSelector).val();
-                          if(out == "" ) 
-				{
-                               return $(strSelector).text();
-
-
-				}          
-
-				return out;
+				return '';
 			};
 
 			var functionSet = function(strSelector, strContent) {
@@ -36,8 +28,8 @@
 			console.log(functionGet('#second')); // expected: 'second'
 			console.log(functionGet('#third')); // expected: 'third'
 			console.log(functionGet('#fourth')); // expected: 'fourth'
-			//functionSet('#second', 'hello');
-			//functionSet('#third', 'world');
+			functionSet('#second', 'hello');
+			functionSet('#third', 'world');
 			console.log(functionGet('#first')); // expected: 'first'
 			console.log(functionGet('#second')); // expected: 'hello'
 			console.log(functionGet('#third')); // expected: 'world'

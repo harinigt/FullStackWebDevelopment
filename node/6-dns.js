@@ -44,6 +44,7 @@ server.listen(process.env.PORT || 8080);
 //https://www.tutorialspoint.com/nodejs/nodejs_dns_module.htm
 //https://github.com/tj/mad-pages/blob/master/node.dns.md
 //https://stackoverflow.com/questions/10610402/javascript-replace-all-commas-in-a-string
+//https://www.w3schools.com/nodejs/ref_dns.asp
 
 // http://localhost:8080/pdx.edu should return '131.252.115.150' in plain text (address might be different, there could even be multiple addresses)
 

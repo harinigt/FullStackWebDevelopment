@@ -26,11 +26,6 @@
 		<div id="third" class="third">third</div>
 
 		<script type="text/javascript">
-                jQuery('#first').addClass('first').css({'background-color': '#CCCCCC'});
-                jQuery('#second').css({'font-weight': 'bold','font-style': 'italic'});
-                jQuery('#third').removeClass('third').css({'position':'fixed',
-				'top':'10px',
-				'right':'10px'})   
 			// add 'first' as a class to jQuery('#first') and further specify a background color of gray (#CCCCCC)
 
 			// make the text in jQuery('#second') bold as well as italic
@@ -39,14 +34,8 @@
 
 			var functionFixed = function(strSelector) {
 				// return whether jQuery(strSelector) has a fixed position
-                                var pos = $(strSelector).css('position');
-                                
-                               if(pos == "fixed"){
-                                
-                                return true ;
-                              } else {
-                               
-				return false;  }
+
+				return false;
 			};
 
 			console.log(functionFixed('#first')); // expected: false
@@ -54,19 +43,12 @@
 
 			var functionClass = function(strSelector, strClass) {
 				// return whether jQuery(strSelector) has strClass (the name of a css class) attached to it
-                              
-                             if($(strSelector).hasClass(strClass)){
-                                 
-                                 return true;
-                               } else { 
-				return false; }
+
+				return false;
 			};
 
 			console.log(functionClass('#first', 'first')); // expected: true
 			console.log(functionClass('#first', 'test')); // expected: false
 		</script>
 	</body>
-
 </html>
-
-

@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>        
-    <title> test </title>
-    </head>
-    <body>
-        lorem ipsum
-        <br/>
-        dolor sit amet
-    </body>
-</html>
-    
-
-
+<head>
+    <script type="text/javascript">
+        function InsertNewRow () {
+            var table = document.getElementById ("table");
+            var row = table.insertRow (1);
+            var cell = row.insertCell (0);
+            cell.innerHTML = "New row";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="InsertNewRow ();">Insert a new row!</button>
+    <br /><br />
+    <table id="table" border="1px">
+        <tbody>
+            <tr>
+                <td>First row.</td>
+            </tr>
+            <tr>
+                <td>Second row.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>

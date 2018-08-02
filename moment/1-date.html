@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			var functionDate = function(longEpoch) {
+				// given longEpoch (an epoch time), return a string that represents the given date in the format 'YYYY.MM.DD HH:mm:ss'
+                
+                var momentt = moment( longEpoch).format('YYYY.MM.DD - HH:mm:ss');
+
+				return momentt;
+			};
+
+			console.log(functionDate(1469635495373)); // expected: '2016.07.17 14:43:11' (assuming pacific standard 
+			console.log(functionDate(1469635304434)); // expected: '1997.12.03 21:43:08' (assuming pacific standard time)
+			console.log(functionDate(1469635411375)); // expected: '2033.04.30 10:01:16' (assuming pacific standard time)
+		</script>
+	</head>
+
+	
+	<body>
+<table border="1"><tbody><tr><th>name</th><th>value</th><th>change</th><th>time</th><th>volume</th></tr><tr><td>6ilti0ww4vp</td><td>0.93</td><td style="background-color: rgb(173, 196, 162);">4.31</td><td>2001.11.15 - 16:26:41.859</td><td>43.9 B</td></tr></tbody></table>
+
+
+<table border="1"><tbody><tr><th>name</th><th>value</th><th>change</th><th>time</th><th>volume</th></tr><tr><td>kb0a0gop6v</td><td>914.88</td><td style="background-color: rgb(173, 196, 162);">3.64</td><td>1975.12.04 - 19:05:00.586</td><td>62.3 B</td></tr><tr><td>ipl0sdhbq7q</td><td>387.02</td><td style="background-color: rgb(173, 196, 162);">9.15</td><td>2013.11.21 - 04:56:35.181</td><td>642.7 B</td></tr></tbody></table>
+	</body>
+</html>
